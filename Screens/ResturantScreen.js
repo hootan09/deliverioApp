@@ -4,6 +4,7 @@ import { useNavigation, useRoute } from '@react-navigation/native'
 import colors from '../assets/colors/colors'
 import { ArrowLeftIcon, ChevronRightIcon, LocationMarkerIcon, QuestionMarkCircleIcon } from 'react-native-heroicons/solid'
 import { StarIcon } from 'react-native-heroicons/solid'
+import DishRow from '../Components/DishRow'
 
 const ResturantScreen = ({navigation}) => {
 
@@ -57,7 +58,7 @@ const ResturantScreen = ({navigation}) => {
           <Text style={{color: colors.darkGray, marginTop: 8, paddingBottom: 16}}>{short_description}</Text>
         </View>
 
-        <TouchableOpacity style={{display: 'flex', flexDirection: 'row', alignItems: 'center', padding:16, borderTopWidth: 1, borderTopColor: colors.darkGray, borderBottomWidth: 1, borderBottomColor: colors.gray}}>
+        <TouchableOpacity style={{display: 'flex', flexDirection: 'row', alignItems: 'center', padding:16, borderTopWidth: 1, borderTopColor: colors.darkGray, borderBottomWidth: 1, borderBottomColor: colors.white}}>
           <QuestionMarkCircleIcon color={colors.gray} opacity={0.6} size={20}/>
           <Text style={{flex: 1,paddingLeft: 8, fontWeight: 'bold', fontSize: 15 }}>Have a food allergy ?</Text>
           <ChevronRightIcon size={20} color={colors.green} opacity={0.7} />
@@ -68,7 +69,15 @@ const ResturantScreen = ({navigation}) => {
         <Text style={{paddingHorizontal: 16, paddingTop: 12, marginBottom: 12, fontSize:22, fontWeight: 'bold'}}>Menu</Text>
 
       {/* DishRows */}
-      
+      {dishes.map(item => (
+        <DishRow 
+          key={item.id}
+          name={item.name}
+          description={item.description}
+          price={item.price}
+          image={item.image}
+        />
+      ))}
       </View>
 
     </ScrollView>
