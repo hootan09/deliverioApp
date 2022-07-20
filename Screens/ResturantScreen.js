@@ -30,7 +30,7 @@ const ResturantScreen = ({navigation}) => {
          />
          <TouchableOpacity 
          onPress={navigation.goBack}
-         style={{position: 'absolute', top: 56, left: 20, backgroundColor: colors.gray, padding: 8, backgroundColor: colors.white, borderRadius: 20}}>
+         style={{position: 'absolute', top: 56, left: 20, backgroundColor: colors.gray, padding: 8, backgroundColor: colors.orange, borderRadius: 20}}>
           <ArrowLeftIcon size={20} color={colors.green}/>
          </TouchableOpacity>
       </View>
@@ -59,7 +59,7 @@ const ResturantScreen = ({navigation}) => {
 
         <TouchableOpacity style={{display: 'flex', flexDirection: 'row', alignItems: 'center', padding:16, borderTopWidth: 1, borderTopColor: colors.darkGray, borderBottomWidth: 1, borderBottomColor: colors.gray}}>
           <QuestionMarkCircleIcon color={colors.gray} opacity={0.6} size={20}/>
-          <Text style={{flex: 1,paddingLeft: 8, fontWeight: 'bold', fontSize: 15 }}>Have a food allergy?</Text>
+          <Text style={{flex: 1,paddingLeft: 8, fontWeight: 'bold', fontSize: 15 }}>Have a food allergy ?</Text>
           <ChevronRightIcon size={20} color={colors.green} opacity={0.7} />
         </TouchableOpacity>
       </View>
