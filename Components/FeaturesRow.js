@@ -4,11 +4,11 @@ import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import colors from '../assets/colors/colors'
 import ResturantCard from './ResturantCard'
 
-const FeaturesRow = ({id,title, description}) => {
+const FeaturesRow = ({title, description, data}) => {
   return (
     <View>
         <View style={{marginTop: 16, display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'}}>
-            <Text style={{fontWeight: 'bold', fontSize: 15}}>{title}</Text>
+            <Text style={{fontWeight: 'bold', fontSize: 15, marginLeft: 2}}>{title}</Text>
             <ArrowRightIcon color={colors.green}/>
         </View>
 
@@ -24,54 +24,20 @@ const FeaturesRow = ({id,title, description}) => {
         >
 
         {/* Resturant Card */}
-        <ResturantCard
-                id={123}
-                imgUrl={'blahblah'}
-                title='Yo! Sushi'
-                rating={4.5}
-                genre="japanes"
-                address="123 Main St"
-                short_description="This is a Test description"
-                dishes={[]}
-                long={20}
-                lat={0}
-        />
-        <ResturantCard
-                id={123}
-                imgUrl={'blahblah'}
-                title='Yo! Sushi'
-                rating={4.5}
-                genre="japanes"
-                address="123 Main St"
-                short_description="This is a Test description"
-                dishes={[]}
-                long={20}
-                lat={0}
-        />
-        <ResturantCard
-                id={123}
-                imgUrl={'blahblah'}
-                title='Yo! Sushi'
-                rating={4.5}
-                genre="japanes"
-                address="123 Main St"
-                short_description="This is a Test description"
-                dishes={[]}
-                long={20}
-                lat={0}
-        />
-        <ResturantCard
-                id={123}
-                imgUrl={'blahblah'}
-                title='Yo! Sushi'
-                rating={4.5}
-                genre="japanes"
-                address="123 Main St"
-                short_description="This is a Test description"
-                dishes={[]}
-                long={20}
-                lat={0}
-        />
+        {data.map(item => (
+            <ResturantCard
+                    key={item.id}
+                    imgUrl={item.imgUrl}
+                    title={item.title}
+                    rating={item.rating}
+                    genre={item.genre}
+                    address={item.address}
+                    short_description={item.description}
+                    dishes={item.dishes}
+                    lon={item.lon}
+                    lat={item.lot}
+            />
+        ))}
 
         </ScrollView>
     </View>

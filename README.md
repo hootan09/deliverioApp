@@ -6,3 +6,5 @@ Todo's
 $ yarn install
 $ expo start
 ```
+
+<img src="./tmp/app.png" width="50%" height="50%" alt="Home Screen">

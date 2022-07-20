@@ -1,11 +1,9 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import foodimage from '../assets/images/food.jpg'
 import { StarIcon } from 'react-native-heroicons/solid'
 import colors from '../assets/colors/colors'
 import { LocationMarkerIcon } from 'react-native-heroicons/outline'
 const ResturantCard = ({
-    id,
     imgUrl,
     title,
     rating,
@@ -13,13 +11,13 @@ const ResturantCard = ({
     address,
     short_description,
     dishes,
-    long,
+    lon,
     lat,
 }) => {
   return (
     <TouchableOpacity style={[{backgroundColor: colors.white, marginRight: 12, }, styles.shadow]}>
       <Image
-        source={foodimage}
+        source={imgUrl}
         style={{height: 140, width: 250, borderRadius: 10}}
       />
       <View style={{paddingHorizontal: 12, paddingBottom: 16}}>

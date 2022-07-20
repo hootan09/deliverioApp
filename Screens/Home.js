@@ -5,7 +5,11 @@ import colors from '../assets/colors/colors'
 import { ChevronDownIcon, UserIcon, SearchIcon, AdjustmentsIcon } from 'react-native-heroicons/outline'
 import Categories from '../Components/Categories'
 import FeaturesRow from '../Components/FeaturesRow'
+
+import sampleData from '../assets/data/sampleData'
+
 const Home = ({ navigation }) => {
+
   useLayoutEffect(() => {
     navigation.setOptions({
       // headerTitle: "Testing"
@@ -49,27 +53,29 @@ const Home = ({ navigation }) => {
       <ScrollView>
         
         {/* Categories */}
-        <Categories/>
+        <Categories
+          data={sampleData.category}
+        />
 
         {/* Featured Rows */}
         <FeaturesRow 
-          id="1"
-          title="Featured"
-          description="Paid placements from our partners"
+          title="Offer Near You"
+          description="Best Place Base by Location"
+          data={sampleData.feature1}
         />
 
         {/* Tasty Discounts */}
         <FeaturesRow 
-          id="2"
-          title="Featured"
+          title="Tasty Discount"
           description="Paid placements from our partners"
+          data={sampleData.feature2}
         />
 
         {/* Offers Near You */}
         <FeaturesRow 
-          id="3"
           title="Featured"
           description="Paid placements from our partners"
+          data={sampleData.feature3}
         />
 
       </ScrollView>
