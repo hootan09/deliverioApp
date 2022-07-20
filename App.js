@@ -1,7 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts } from 'expo-font';
-import Home from './Screens/Home';
+import HomeScreen from './Screens/HomeScreen';
+import ResturantScreen from './Screens/ResturantScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,8 +20,12 @@ export default function App() {
   return (
     <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} options={{
+      <Stack.Screen name="HomeScreen" component={HomeScreen} options={{
         //headerShown: false
+      }} />
+      <Stack.Screen name="ResturantScreen" component={ResturantScreen} options={{
+        headerShown: false,
+        presentation: 'modal'
       }} />
     </Stack.Navigator>
   </NavigationContainer>

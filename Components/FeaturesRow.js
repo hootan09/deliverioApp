@@ -18,6 +18,7 @@ const FeaturesRow = ({title, description, data}) => {
             horizontal
             contentContainerStyle={{
                 paddingHorizontal: 15,
+                borderRadius: 40,
             }}
             showsHorizontalScrollIndicator={false}
             style={{paddingTop: 16}}
@@ -32,7 +33,7 @@ const FeaturesRow = ({title, description, data}) => {
                     rating={item.rating}
                     genre={item.genre}
                     address={item.address}
-                    short_description={item.description}
+                    short_description={item.short_description}
                     dishes={item.dishes}
                     lon={item.lon}
                     lat={item.lot}

@@ -3,6 +3,8 @@ import React from 'react'
 import { StarIcon } from 'react-native-heroicons/solid'
 import colors from '../assets/colors/colors'
 import { LocationMarkerIcon } from 'react-native-heroicons/outline'
+import { useNavigation } from '@react-navigation/native'
+
 const ResturantCard = ({
     imgUrl,
     title,
@@ -14,8 +16,23 @@ const ResturantCard = ({
     lon,
     lat,
 }) => {
+
+  const navigation = useNavigation();
+
   return (
-    <TouchableOpacity style={[{backgroundColor: colors.white, marginRight: 12, }, styles.shadow]}>
+    <TouchableOpacity
+     onPress={()=> navigation.navigate('ResturantScreen', {
+      imgUrl,
+      title,
+      rating,
+      genre,
+      address,
+      short_description,
+      dishes,
+      lon,
+      lat,
+     })}
+     style={[{backgroundColor: colors.white, marginRight: 12, }, styles.shadow]}>
       <Image
         source={imgUrl}
         style={{height: 140, width: 250, borderRadius: 10}}

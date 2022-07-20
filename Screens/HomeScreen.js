@@ -8,7 +8,7 @@ import FeaturesRow from '../Components/FeaturesRow'
 
 import sampleData from '../assets/data/sampleData'
 
-const Home = ({ navigation }) => {
+const HomeScreen = ({ navigation }) => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -85,7 +85,7 @@ const Home = ({ navigation }) => {
 }
 
 
-export default Home
+export default HomeScreen
 
 const styles = StyleSheet.create({
   container: {
