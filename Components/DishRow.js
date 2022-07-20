@@ -35,7 +35,7 @@ const DishRow = ({
     </TouchableOpacity>
 
     {isPressed && (
-        <View style={{backgroundColor: colors.white, paddingHorizontal: 1, borderWidth: 1,borderTopColor: colors.white, borderBottomColor: colors.darkGray}}>
+        <View style={{backgroundColor: colors.white, paddingHorizontal: 1, borderWidth: 1,borderColor: colors.white, borderBottomColor: colors.darkGray}}>
             <View style={{display: 'flex', flexDirection: 'row', alignItems: 'center', marginLeft: 1, paddingBottom: 12,}}>
                 <TouchableOpacity>
                     <MinusCircleIcon color={colors.green} size={40} />
