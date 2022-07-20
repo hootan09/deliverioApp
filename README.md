@@ -5,4 +5,5 @@ Todo's
 ```
 $ yarn install
 $ expo start
+
 ```sh
