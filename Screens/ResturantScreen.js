@@ -5,6 +5,7 @@ import colors from '../assets/colors/colors'
 import { ArrowLeftIcon, ChevronRightIcon, LocationMarkerIcon, QuestionMarkCircleIcon } from 'react-native-heroicons/solid'
 import { StarIcon } from 'react-native-heroicons/solid'
 import DishRow from '../Components/DishRow'
+import BasketIcon from '../Components/BasketIcon'
 
 const ResturantScreen = ({navigation}) => {
 
@@ -23,6 +24,8 @@ const ResturantScreen = ({navigation}) => {
   }} = useRoute();
 
   return (
+    <>
+    <BasketIcon/>
     <ScrollView style={styles.container}>
       <View style={{position: 'relative'}}>
         <Image
@@ -65,7 +68,7 @@ const ResturantScreen = ({navigation}) => {
         </TouchableOpacity>
       </View>
 
-      <View>
+      <View style={{paddingBottom: 140}}>
         <Text style={{paddingHorizontal: 16, paddingTop: 12, marginBottom: 12, fontSize:22, fontWeight: 'bold'}}>Menu</Text>
 
       {/* DishRows */}
@@ -82,6 +85,7 @@ const ResturantScreen = ({navigation}) => {
       </View>
 
     </ScrollView>
+    </>
   )
 }
 
