@@ -32,11 +32,11 @@ const DeliveryScreen = ({navigation}) => {
                 </View>
                 <Image 
                     source={require('../assets/images/foodSample/delivery2.jpg')}
-                    style={{width: 80, height: 80}}
+                    style={{width: 80, height: 80, borderRadius: 15}}
                 />
             </View>
 
-            <Progress.Bar size={30} indeterminate={true} color={colors.white}/>
+            <Progress.Bar size={30} indeterminate={true} color={colors.green} />
 
             <Text style={{marginTop: 12, color:colors.darkGray, fontSize: 15, fontWeight: 'bold'}}>
                 Your order at {resturant.title} is being prepared
@@ -53,13 +53,41 @@ const DeliveryScreen = ({navigation}) => {
             }}
         style={{
             width: Dimensions.get('window').width,
-            height: Dimensions.get('window').height,
+            height: Dimensions.get('window').height/1.5,
             marginTop: -40, 
             zIndex: 0}}
         mapType="mutedStandard"
         >
         </MapView>
+
+        <Marker 
+            coordinate={{
+                latitude: resturant.lat,
+                longitude: resturant.lon
+
+            }}
+            title={resturant.title}
+            description={resturant.description}
+            identifier="origin"
+            pinColor='#00CCBB'
+        />
+
+        <View style={{position: 'absolute', bottom: 1, width: '100%'}}>
+            <SafeAreaView style={{backgroundColor: colors.white, display: 'flex', flexDirection: 'row', alignItems: 'center', height:90}}>
+                <Image 
+                    source={require('../assets/images/foodSample/delivery.jpg')}
+                    style={{height:48, width:48, backgroundColor: colors.darkGray, padding: 16, borderRadius: 25, marginLeft: 20}}
+                />
+                <View style={{flex: 1}}>
+                    <Text style={{fontSize:15, fontWeight: '700',color: colors.black, paddingLeft: 6 }}>Mamad Niki</Text>
+                    <Text style={{fontSize:15, fontWeight: '700',color: colors.gray, paddingLeft: 6}}>Your Rider</Text>
+                </View>
+                <Text style={{color: colors.darkGray, fontSize: 20, fontWeight: 'bold', marginRight: 20}}>Call</Text>
+            </SafeAreaView>
+        </View>
+
     </View>
+
   )
 }
 
