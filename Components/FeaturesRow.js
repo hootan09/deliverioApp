@@ -36,7 +36,7 @@ const FeaturesRow = ({title, description, data}) => {
                     short_description={item.short_description}
                     dishes={item.dishes}
                     lon={item.lon}
-                    lat={item.lot}
+                    lat={item.lat}
             />
         ))}
 

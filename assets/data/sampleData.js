@@ -65,8 +65,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.380730,
+            lat:35.708309,
         },
         {
             id: 2,
@@ -99,8 +99,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
         {
             id: 3,
@@ -133,8 +133,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
         {
             id: 4,
@@ -167,8 +167,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
     ],
     feature2: [
@@ -203,8 +203,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
         {
             id: 2,
@@ -237,8 +237,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
         {
             id: 3,
@@ -271,8 +271,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
         {
             id: 4,
@@ -305,8 +305,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
     ],
     feature3: [
@@ -341,8 +341,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
         {
             id: 2,
@@ -375,8 +375,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
         {
             id: 3,
@@ -409,8 +409,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
         {
             id: 4,
@@ -443,8 +443,8 @@ export default sampleData = {
                     image: require('../images/foodSample/burger.jpg'),
                 }
             ],
-            lon:20,
-            lat:0,
+            lon:51.404343,
+            lat:35.715298,
         },
     ]
 }

@@ -8,6 +8,9 @@ import { useFonts } from 'expo-font';
 import HomeScreen from './Screens/HomeScreen';
 import ResturantScreen from './Screens/ResturantScreen';
 import BasketScreen from './Screens/BasketScreen';
+import PrepareOrderScreen from './Screens/PrepareOrderScreen';
+import DeliveryScreen from './Screens/DeliveryScreen';
+import TestMap from './Screens/TestMap';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +39,17 @@ export default function App() {
         <Stack.Screen name="BasketScreen" component={BasketScreen} options={{
           headerShown: false,
           presentation: 'modal'
+        }} />
+        <Stack.Screen name="PrepareOrderScreen" component={PrepareOrderScreen} options={{
+          headerShown: false,
+          presentation: 'fullScreenModal'
+        }} />
+        <Stack.Screen name="DeliveryScreen" component={DeliveryScreen} options={{
+          headerShown: false,
+          presentation: 'fullScreenModal'
+        }} />
+        <Stack.Screen name="TestMap" component={TestMap} options={{
+          headerShown: false
         }} />
       </Stack.Navigator>
       </Provider>

@@ -29,6 +29,8 @@ const ResturantCard = ({
       address,
       short_description,
       imgUrl,
+      lat,
+      lon,
     }));
 
     navigation.navigate('ResturantScreen', {
