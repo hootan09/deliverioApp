@@ -16,7 +16,6 @@ const HomeScreen = ({ navigation }) => {
       headerShown: false
     })
   }, [])
-
   return (
     <SafeAreaView style={styles.container}>
 

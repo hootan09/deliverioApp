@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   items: [],
+  resturant: {},
 }
 
 export const basketSlice = createSlice({
@@ -21,17 +22,23 @@ export const basketSlice = createSlice({
         console.warn(`Can't remove product (id: ${action.payload.id}) as its not in basket`)
       }
     },
+
+    addResturant: (state, action) => {
+      state.resturant = action.payload;
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { addToBasket, removeFromBasket } = basketSlice.actions
+export const { addToBasket, removeFromBasket, addResturant } = basketSlice.actions
 
 export const selectBasketItems = (state) => state.basket.items;
 
 export const selectBasketItemsWithId = (state, id) => state.basket.items.filter(item => item.id === id);
 
 export const selectBasketTotal = (state) => state.basket.items.reduce((total, item) => total += item.price, 0)
+
+export const selectResturant = (state) => state.basket.resturant;
 
 
 export default basketSlice.reducer

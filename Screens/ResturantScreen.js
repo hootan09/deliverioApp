@@ -25,7 +25,9 @@ const ResturantScreen = ({navigation}) => {
 
   return (
     <>
+    {/* absolute Basket Icon */}
     <BasketIcon/>
+
     <ScrollView style={styles.container}>
       <View style={{position: 'relative'}}>
         <Image

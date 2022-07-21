@@ -1,5 +1,6 @@
 export default sampleData = {
     avatar: require('../images/person.png'),
+    delivery: require('../images/foodSample/delivery3.jpg'),
     category: [
         {
             id:1,

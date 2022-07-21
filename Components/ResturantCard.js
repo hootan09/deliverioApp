@@ -4,6 +4,8 @@ import { StarIcon } from 'react-native-heroicons/solid'
 import colors from '../assets/colors/colors'
 import { LocationMarkerIcon } from 'react-native-heroicons/outline'
 import { useNavigation } from '@react-navigation/native'
+import { useDispatch } from 'react-redux'
+import { addResturant } from '../features/basketSlice'
 
 const ResturantCard = ({
     imgUrl,
@@ -17,11 +19,19 @@ const ResturantCard = ({
     lat,
 }) => {
 
-  const navigation = useNavigation();
+  
+  const dispatch = useDispatch();
+  const checkResturant = () => {
+    dispatch(addResturant({
+      title,
+      rating,
+      genre,
+      address,
+      short_description,
+      imgUrl,
+    }));
 
-  return (
-    <TouchableOpacity
-     onPress={()=> navigation.navigate('ResturantScreen', {
+    navigation.navigate('ResturantScreen', {
       imgUrl,
       title,
       rating,
@@ -31,7 +41,15 @@ const ResturantCard = ({
       dishes,
       lon,
       lat,
-     })}
+     });
+  }
+
+
+  const navigation = useNavigation();
+
+  return (
+    <TouchableOpacity
+     onPress={checkResturant}
      style={[{backgroundColor: colors.white, marginRight: 12, }, styles.shadow]}>
       <Image
         source={imgUrl}
@@ -67,5 +85,5 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.27,
     elevation: 10,
-      }
+    }
 })
